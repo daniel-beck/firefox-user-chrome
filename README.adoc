@@ -1,0 +1,15 @@
+= Firefox User Chrome for Left-Side Close Tab Button
+
+This Firefox `userChrome.css` moves the Close Tab button to the left.
+
+== Usage
+
+Find your Firefox profile folder.
+On Mac OS, it is located in `/Users/<yourname>/Library/Application Support/Firefox`.
+Note that `Library` is likely hidden, but you get get there in Finder by choosing _Go » Go to Folder_.
+Create the directory `chrome` inside your profile folder, if it doesn't exist.
+Create the file `userChrome.css` inside `chrome/`, if it doesn't exist, and put the content of this repo's `userChrome.css` inside.
+
+== Compatibility
+
+This `userChrome.css` works as expected on Firefox 106.

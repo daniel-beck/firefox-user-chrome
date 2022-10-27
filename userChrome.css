@@ -1,0 +1,32 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+/* Parts based on https://gist.github.com/henrik242/3abf4c52ebf81add5cfe38acf97c2053 */
+
+.tabbrowser-tab .tab-close-button {
+
+  /* Move to left */
+  -moz-box-ordinal-group: 0 !important;
+
+  /* do not let background overlap tab label, also align properly when replacing favicon */
+  margin-left: -4px !important;
+  margin-right: 1.5px !important;
+  
+  /* prevent moving on hover */
+  padding-left: 7px !important;
+  
+  /* Do not collapse into 1px when not hovered */
+  min-width: 24px !important;
+}
+
+.tabbrowser-tab:not([pinned="true"]):hover .tab-close-button {
+  /* show when hovering the tab even when otherwise hidden for length */
+  display: -moz-box !important;
+}
+
+.tabbrowser-tab:not([pinned="true"]):hover .tab-icon-stack,
+.tabbrowser-tab:not([pinned="true"]):hover .tab-throbber,
+.tab-close-button {
+  /* By default, hide the close button and on hover repace favicon with close button */
+  display: none;
+}
+
